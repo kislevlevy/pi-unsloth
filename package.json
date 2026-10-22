@@ -1,0 +1,25 @@
+{
+  "name": "pi-unsloth",
+  "version": "1.0.0",
+  "description": "Pi provider extension for a local Unsloth (OpenAI-compatible) model server, with live model discovery.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "unsloth",
+    "local-llm"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/unsloth.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "files": [
+    "extensions",
+    "unsloth.example.json",
+    "README.md"
+  ]
+}

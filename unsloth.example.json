@@ -1,0 +1,7 @@
+{
+  "baseURL": "http://localhost:8000/v1",
+  "apiKey": "your-unsloth-api-key",
+  "contextWindow": 8192,
+  "maxTokens": 2048,
+  "timeoutMs": 5000
+}
