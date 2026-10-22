@@ -16,12 +16,20 @@ pi -e git:github.com/kislevlevy/pi-unsloth
 
 ## Configure
 
-Copy the example config into Pi's agent directory and fill in your server details:
+`pi install` clones the package to `~/.pi/agent/git/github.com/kislevlevy/pi-unsloth/`, so the example config is at:
+
+```
+~/.pi/agent/git/github.com/kislevlevy/pi-unsloth/unsloth.example.json
+```
+
+Copy it into Pi's agent directory, then edit it with your server details:
 
 ```bash
-cp unsloth.example.json ~/.pi/agent/unsloth.json
+cp ~/.pi/agent/git/github.com/kislevlevy/pi-unsloth/unsloth.example.json ~/.pi/agent/unsloth.json
 chmod 600 ~/.pi/agent/unsloth.json
 ```
+
+With `pi install --local` the clone is in the project instead, at `.pi/git/github.com/kislevlevy/pi-unsloth/`. If `PI_CODING_AGENT_DIR` is set, use that in place of `~/.pi/agent`.
 
 | Field            | Required | Default | Meaning                                                                               |
 | ---------------- | -------- | ------- | ------------------------------------------------------------------------------------- |
@@ -37,6 +45,8 @@ Environment variables override the file:
 - `UNSLOTH_CONFIG` – path to a different config file
 - `UNSLOTH_BASE_URL` – overrides `baseURL`
 - `UNSLOTH_API_KEY` – overrides `apiKey`
+
+The config file must still exist (it can be `{}`) when you use only environment variables, because the extension reads it at startup.
 
 ## Use
 
