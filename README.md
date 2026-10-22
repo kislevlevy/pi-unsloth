@@ -5,13 +5,13 @@ A [Pi](https://pi.dev) extension that registers a local **Unsloth** model server
 ## Install
 
 ```bash
-pi install git:github.com/<your-user>/pi-unsloth
+pi install git:github.com/kislevlevy/pi-unsloth
 ```
 
 Try it for one run without installing:
 
 ```bash
-pi -e git:github.com/<your-user>/pi-unsloth
+pi -e git:github.com/kislevlevy/pi-unsloth
 ```
 
 ## Configure
