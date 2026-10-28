@@ -203,7 +203,11 @@ export default async function (pi: ExtensionAPI) {
   }
 
   pi.on("before_provider_request", (event, ctx) => {
-    if (!isUnsloth(ctx.model) || !event.payload || typeof event.payload !== "object")
+    if (
+      !isUnsloth(ctx.model) ||
+      !event.payload ||
+      typeof event.payload !== "object"
+    )
       return event.payload;
     const payload = { ...(event.payload as Record<string, unknown>) };
     // Without a cap, Unsloth generates until EOS or the end of its context window.

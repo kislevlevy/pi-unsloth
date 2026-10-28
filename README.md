@@ -31,14 +31,14 @@ chmod 600 ~/.pi/agent/unsloth.json
 
 With `pi install --local` the clone is in the project instead, at `.pi/git/github.com/kislevlevy/pi-unsloth/`. If `PI_CODING_AGENT_DIR` is set, use that in place of `~/.pi/agent`.
 
-| Field            | Required | Default  | Meaning                                                                                                   |
-| ---------------- | -------- | -------- | --------------------------------------------------------------------------------------------------------- |
-| `baseURL`        | yes      |          | Server's OpenAI-compatible base URL, e.g. `http://192.168.1.20:8000/v1`                                   |
-| `apiKey`         | yes      |          | Bearer token sent to the server                                                                           |
+| Field            | Required | Default  | Meaning                                                                                                      |
+| ---------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| `baseURL`        | yes      |          | Server's OpenAI-compatible base URL, e.g. `http://192.168.1.20:8000/v1`                                      |
+| `apiKey`         | yes      |          | Bearer token sent to the server                                                                              |
 | `contextWindow`  | no       | `131072` | Fallback only, for models Unsloth hasn't loaded yet. A loaded model always uses Unsloth's configured context |
-| `maxTokens`      | no       | none     | Optional output cap. When unset, no limit is sent and Unsloth generates until EOS or the context is full  |
-| `timeoutMs`      | no       | `60000`  | Model discovery timeout                                                                                   |
-| `modelOverrides` | no       |          | Per-model-ID overrides of Pi model settings, e.g. `{"my-model": {"reasoning": true}}`                     |
+| `maxTokens`      | no       | none     | Optional output cap. When unset, no limit is sent and Unsloth generates until EOS or the context is full     |
+| `timeoutMs`      | no       | `60000`  | Model discovery timeout                                                                                      |
+| `modelOverrides` | no       |          | Per-model-ID overrides of Pi model settings, e.g. `{"my-model": {"reasoning": true}}`                        |
 
 Leave `contextWindow` and `maxTokens` unset unless you need them. Setting them to small values truncates responses and triggers early compaction.
 
